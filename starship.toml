@@ -1,0 +1,76 @@
+format = """\
+[░▒▓](fg:green_secondary)\
+$directory\
+[](fg:green_secondary bg:green_vibrant)\
+$time\
+[](fg:green_vibrant)\
+$fill\
+$git_branch\
+$git_status\
+$cmd_duration
+$character"""
+
+palette = "deep_forest"
+
+# Palette ---------------------------------------------------------------------
+
+[palettes.deep_forest]
+bg_dark = "#0D1D0F"
+error_dark = "#874018"
+green_primary = "#80AC2A"
+warning_muted = "#AC9902"
+blue_muted = "#107762"
+green_secondary = "#518422"
+gold_muted = "#9C750F"
+text_muted = "#9D9B8C"
+black_bright = "#304833"
+error_bright = "#AF2B01"
+green_bright = "#55A908"
+warning_bright = "#CCB607"
+blue_bright = "#00AD8C"
+green_vibrant = "#54a30b"
+gold_bright = "#C99306"
+text_max = "#E7E4D1"
+
+# Module configuration --------------------------------------------------------
+
+[directory]
+style = "bold gold_bright bg:green_secondary"
+format = "[ $path ]($style)"
+home_symbol = "~"
+
+[time]
+disabled = false
+style = "bold gold_bright bg:green_vibrant"
+format = "[ $time ]($style)"
+use_military_time = true 
+
+[git_branch]
+symbol = " "
+style = "bold green_primary"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "bold warning_muted"
+staged = "+([$count])"
+modified = "*([$count])"
+untracked = "?([$count])"
+format = "[$staged$modified$untracked]($style) "
+
+[cmd_duration]
+min_time = 5000
+style = "bold gold_bright"
+format = "took [$duration]($style)"
+
+[character]
+success_symbol = "[❯](bold green_primary)" 
+error_symbol = "[❯](bold error_dark)"
+
+[fill]
+symbol = " "
+
+[username]
+disabled = true
+
+[hostname]
+disabled = true
