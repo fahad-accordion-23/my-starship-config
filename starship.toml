@@ -62,8 +62,8 @@ disabled = true
 symbol = " "
 
 [character]
-success_symbol = "[❯](bold fg:green_primary)" 
-error_symbol = "[❯](bold fg:error_dark)"
+success_symbol = "[](bold fg:green_primary)" 
+error_symbol = "[](bold fg:error_dark)"
 
 [username]
 disabled = true
