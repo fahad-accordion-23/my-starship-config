@@ -5,9 +5,11 @@ $directory\
 $time\
 [](fg:green_vibrant)\
 $fill\
-$git_branch\
+[](fg:gold_muted)\
 $git_status\
-$cmd_duration
+[](fg:blue_muted bg:gold_muted)\
+$git_branch\
+[▓▒░](fg:blue_muted)
 $character"""
 
 palette = "deep_forest"
@@ -35,39 +37,33 @@ text_max = "#E7E4D1"
 # Module configuration --------------------------------------------------------
 
 [directory]
-style = "bold gold_bright bg:green_secondary"
+style = "bold fg:gold_bright bg:green_secondary"
 format = "[ $path ]($style)"
 home_symbol = "~"
 
 [time]
 disabled = false
-style = "bold gold_bright bg:green_vibrant"
+style = "bold fg:gold_bright bg:green_vibrant"
 format = "[ $time ]($style)"
-use_military_time = true 
 
 [git_branch]
 symbol = " "
-style = "bold green_primary"
-format = "[$symbol$branch]($style) "
+style = "bold fg:gold_bright bg:blue_muted"
+format = "[ $symbol$branch ]($style)"
 
 [git_status]
-style = "bold warning_muted"
-staged = "+([$count])"
-modified = "*([$count])"
-untracked = "?([$count])"
-format = "[$staged$modified$untracked]($style) "
+style = "bold fg:warning_bright bg:gold_muted"
+format = "[ $all_status$ahead_behind ]($style)"
 
 [cmd_duration]
-min_time = 5000
-style = "bold gold_bright"
-format = "took [$duration]($style)"
-
-[character]
-success_symbol = "[❯](bold green_primary)" 
-error_symbol = "[❯](bold error_dark)"
+disabled = true
 
 [fill]
 symbol = " "
+
+[character]
+success_symbol = "[❯](bold fg:green_primary)" 
+error_symbol = "[❯](bold fg:error_dark)"
 
 [username]
 disabled = true
