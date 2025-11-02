@@ -44,6 +44,7 @@ home_symbol = "~"
 [time]
 disabled = false
 style = "bold fg:gold_bright bg:green_vibrant"
+time_format = "%R"
 format = "[ $time ]($style)"
 
 [git_branch]
