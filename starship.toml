@@ -5,9 +5,8 @@ $directory\
 $time\
 [](fg:green_vibrant)\
 $fill\
-[](fg:gold_muted)\
+[](fg:blue_muted)\
 $git_status\
-[](fg:blue_muted bg:gold_muted)\
 $git_branch\
 [▓▒░](fg:blue_muted)
 $character"""
@@ -50,11 +49,11 @@ format = "[ $time ]($style)"
 [git_branch]
 symbol = " "
 style = "bold fg:gold_bright bg:blue_muted"
-format = "[ $symbol$branch ]($style)"
+format = "[ $branch $symbol]($style)"
 
 [git_status]
-style = "bold fg:warning_bright bg:gold_muted"
-format = "[ $all_status$ahead_behind ]($style)"
+style = "bold fg:warning_bright bg:blue_muted"
+format = "[ $all_status$ahead_behind]($style)"
 
 [cmd_duration]
 disabled = true
